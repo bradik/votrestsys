@@ -10,14 +10,4 @@
     <context:component-scan base-package="com.brad.projects.**.web"/>
 
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-          p:prefix="/WEB-INF/jsp/"
-          p:suffix=".jsp"/>
-
-    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
-          p:cacheSeconds="0"
-          p:defaultEncoding="UTF-8">
-        <property name="basenames" value="file:///#{systemEnvironment['VOTRESTSYS_ROOT']}/config/messages/app"/>
-        <property name="fallbackToSystemLocale" value="false"/>
-    </bean>
 </beans>

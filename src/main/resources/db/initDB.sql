@@ -1,21 +1,19 @@
-
 DROP TABLE IF EXISTS users_vote;
 
 DROP TABLE IF EXISTS user_roles;
 DROP TABLE IF EXISTS users;
-DROP SEQUENCE IF EXISTS users_seq;
 
 DROP TABLE IF EXISTS restaurants_menu;
 DROP TABLE IF EXISTS restaurants;
-DROP SEQUENCE IF EXISTS restaurants_seq;
+
+DROP SEQUENCE IF EXISTS global_seq;
 
 
-CREATE SEQUENCE users_seq       START 100000;
-CREATE SEQUENCE restaurants_seq START 100000;
+CREATE SEQUENCE global_seq       START 100000;
 
 CREATE TABLE users
 (
-  id               INTEGER PRIMARY KEY DEFAULT nextval('users_seq'),
+  id               INTEGER PRIMARY KEY DEFAULT nextval('global_seq'),
   name             VARCHAR                  NOT NULL,
   email            VARCHAR                  NOT NULL,
   password         VARCHAR                  NOT NULL,
@@ -33,7 +31,7 @@ CREATE TABLE user_roles
 );
 
 CREATE TABLE restaurants (
-  id          INTEGER PRIMARY KEY DEFAULT nextval('restaurants_seq'),
+  id          INTEGER PRIMARY KEY DEFAULT nextval('global_seq'),
   description TEXT      NOT NULL,
   address     TEXT       NOT NULL
 );
