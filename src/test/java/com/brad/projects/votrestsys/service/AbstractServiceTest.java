@@ -1,3 +1,5 @@
+package com.brad.projects.votrestsys.service;
+
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Rule;

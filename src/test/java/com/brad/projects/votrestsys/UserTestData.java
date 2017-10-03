@@ -1,3 +1,5 @@
+package com.brad.projects.votrestsys;
+
 import com.brad.projects.votrestsys.model.Role;
 import com.brad.projects.votrestsys.model.User;
 
